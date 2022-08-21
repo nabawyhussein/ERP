@@ -51,7 +51,7 @@ TextStyle getLightStyle({double fontSize = 12, Color? color}) {
 }
 
 ///bold Style
-TextStyle getArabicCairoBoldStyle({
+TextStyle getBoldStyle({
   double fontSize = 12,
   Color? color,
 }) {
@@ -61,6 +61,7 @@ TextStyle getArabicCairoBoldStyle({
       ? _getTextStylePoppins(fontSize, FontWeightManger.bold, color!)
       : _getTextStyleArabic(fontSize, FontWeightManger.bold, color!);
 }
+
 
 ///semibold Style
 TextStyle getSemiBoldStyle({double fontSize = 12, Color? color}) {
@@ -76,12 +77,7 @@ TextStyle getRegularRobotoStyle({double fontSize = 12, Color? color}) {
       : _getTextStyleArabic(fontSize, FontWeightManger.regular, color!);
 }
 
-///RobotoBold Style
-TextStyle getBoldRobotoStyle({double fontSize = 12, Color? color}) {
-  return AppConstant.locale == Locale('en')
-      ? _getTextStylePoppins(fontSize, FontWeightManger.bold, color!)
-      : _getTextStyleArabic(fontSize, FontWeightManger.bold, color!);
-}
+
 
 ///Robotosemibold Style
 TextStyle getRobotoSemiBoldStyle({double fontSize = 12, Color? color}) {

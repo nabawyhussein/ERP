@@ -130,7 +130,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                             Text(
                               LocaleKeys.registration.tr(),
-                              style: getBoldRobotoStyle(
+                              style: getBoldStyle(
                                   fontSize: AppSize.size(context).width * .038,
                                   color: ColorManger.black),
                               // fontWeight: FontWeight.w600,

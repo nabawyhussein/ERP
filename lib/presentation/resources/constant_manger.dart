@@ -38,7 +38,7 @@ class AppConstant {
             "نص تعبيري يعبر عن شرح التطبيق وما ستفعله \n نص تعبيري يعبر عن شرح التطبيق وما ستفعله"),
   ];
   static List<HomeModel> homeList = [
-    HomeModel(txtAr: AppString.treasuryAndBondsAra,txtEn: AppString.treasuryAndBondsEng,nextScreen: Routes.loginScreen),
+    HomeModel(txtAr: AppString.treasuryAndBondsAra,txtEn: AppString.treasuryAndBondsEng,nextScreen: Routes.treasuryAndBondsScreens),
     HomeModel(txtAr: AppString.customersAndSuppliersAra,txtEn: AppString.customersAndSuppliersEng,nextScreen: Routes.startScreen),
     HomeModel(txtAr: AppString.invoicesAra,txtEn: AppString.invoicesEng,nextScreen: Routes.startScreen),
     HomeModel(txtAr: AppString.dailyNoteBookAra,txtEn: AppString.dailyNoteBookEng,nextScreen: Routes.startScreen),

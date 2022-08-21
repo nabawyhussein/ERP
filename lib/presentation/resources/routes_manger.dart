@@ -6,6 +6,7 @@ import '../main_screen/on_boarding/screens/on_boarding_screen.dart';
 import '../main_screen/select_main_category/screens/select_main_category_screen.dart';
 import '../main_screen/splash/splash_screen.dart';
 import '../main_screen/start/start_screen.dart';
+import '../main_screen/treasury_and_bonds/screens/treasury_and_bonds_screen.dart';
 
 class Routes {
   ///main route
@@ -24,6 +25,8 @@ class Routes {
   static const String registerScreen = "/registerScreen";
   /// SelectMainCategoryScreen
   static const String selectMainCategoryScreen = "/SelectMainCategoryScreen";
+  /// TreasuryAndBondsScreens
+  static const String treasuryAndBondsScreens = "/TreasuryAndBondsScreens";
 }
 
 class RouteGenerator {
@@ -41,6 +44,8 @@ class RouteGenerator {
         return createRoute(OnBoardingScreen());
         case Routes.selectMainCategoryScreen:
         return createRoute(const SelectMainCategoryScreen());
+        case Routes.treasuryAndBondsScreens:
+        return createRoute(const TreasuryAndBondsScreens());
       default:
         return unDefinedRoute();
     }

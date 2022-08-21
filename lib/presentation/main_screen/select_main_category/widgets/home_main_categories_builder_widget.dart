@@ -23,8 +23,8 @@ class HomeMainCategoriesBuilderWidget extends StatelessWidget {
         itemCount: AppConstant.homeList.length,
         itemBuilder: (context, index) => InkWell(
           onTap: () async {
-            // Navigator.pushNamed(context, AppConstant.homeList[index].nextScreen!);
-            await context.setLocale(AppConstant.arabic);
+            Navigator.pushNamed(context, AppConstant.homeList[index].nextScreen!);
+            // await context.setLocale(AppConstant.arabic);
           },
           child: Container(
             padding: EdgeInsets.symmetric(vertical: AppSize.size(context).width * 0.02,horizontal: AppSize.size(context).width * 0.05),

@@ -50,7 +50,7 @@ class RegisterScreen extends StatelessWidget {
                   Center(
                     child: Text(
                       LocaleKeys.welcomeToTheLabeebApp.tr(),
-                      style: getArabicCairoBoldStyle(
+                      style: getBoldStyle(
                           fontSize: AppSize.size(context).width * .0465,
                           color: ColorManger.black),
                     ),
@@ -134,7 +134,7 @@ class RegisterScreen extends StatelessWidget {
                           ),
                           Text(
                             LocaleKeys.login.tr(),
-                            style: getBoldRobotoStyle(
+                            style: getBoldStyle(
                                 fontSize: AppSize.size(context).width * .038,
                                 color: ColorManger.primary),
                           ),
