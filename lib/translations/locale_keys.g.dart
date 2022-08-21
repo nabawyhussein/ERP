@@ -68,5 +68,32 @@ abstract class  LocaleKeys {
   static const submit = 'submit';
   static const logout = 'logout';
   static const success = 'success';
+  static const treasury = 'treasury';
+  static const currentBalance = 'currentBalance';
+  static const addDocument = 'addDocument';
+  static const Creditor = 'Creditor';
+  static const movementsReport = 'movementsReport';
+  static const lastMove = 'lastMove';
+  static const document = 'document';
+  static const documentNum = 'documentNum';
+  static const Debtor = 'Debtor';
+  static const addMovement = 'addMovement';
+  static const customersAndSuppliers = 'customersAndSuppliers';
+  static const customers = 'customers';
+  static const Suppliers = 'Suppliers';
+  static const dailySalesReport = 'dailySalesReport';
+  static const finalReport = 'finalReport';
+  static const Invoices = 'Invoices';
+  static const dailyRestrictions = 'dailyRestrictions';
+  static const salesInvoices = 'salesInvoices';
+  static const saleReturn = 'saleReturn';
+  static const PurchaseInvoices = 'PurchaseInvoices';
+  static const PurchaseReturn = 'PurchaseReturn';
+  static const dateFrom = 'dateFrom';
+  static const dateTo = 'dateTo';
+  static const addClient = 'addClient';
+  static const addInvoice = 'addInvoice';
+  static const addRestrictions = 'addRestrictions';
+  static const pricesOffers = 'pricesOffers';
 
 }

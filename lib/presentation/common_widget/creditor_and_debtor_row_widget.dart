@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:labeeb_front/translations/locale_keys.g.dart';
 
 import '../resources/color_manger.dart';
 import '../resources/font_manger.dart';
@@ -18,7 +20,7 @@ class CreditorAndDebtorRowWidget extends StatelessWidget {
         children: [
           Column(
             children: [
-              Text("مدين",
+              Text(LocaleKeys.Debtor.tr(),
                   style: getBoldStyle(
                       fontSize: AppSize.size(context).width * .042,
                       color: ColorManger.grey)),
@@ -30,7 +32,7 @@ class CreditorAndDebtorRowWidget extends StatelessWidget {
           ),
           Column(
             children: [
-              Text("دائن",
+              Text(LocaleKeys.Creditor.tr(),
                   style: getBoldStyle(
                       fontSize: AppSize.size(context).width * .042,
                       color: ColorManger.grey)),

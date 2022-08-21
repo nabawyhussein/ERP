@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
-
-import '../../../../bloc/app_bloc/app_cubit.dart';
 import '../resources/color_manger.dart';
 import '../resources/font_manger.dart';
 import '../resources/style_manger.dart';
@@ -16,8 +12,6 @@ class CommonContainerTwoTextRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Container(
       width: AppSize.size(context).width * .85,
-      padding: EdgeInsets.symmetric(horizontal: AppSize.size(context).width * .08,
-      ),
       decoration: BoxDecoration(
         border: Border.all(color: ColorManger.primary),
         borderRadius: BorderRadius.circular(AppSize.size(context).width * .073),
@@ -25,16 +19,24 @@ class CommonContainerTwoTextRow extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(firstTxt,style: getBoldStyle(
-              fontSize: AppSize.size(context).width * .042,
-              color: ColorManger.black)),
+          Expanded(
+            child: Text(firstTxt,style: getBoldStyle(
+                fontSize: AppSize.size(context).width * .035,
+                color: ColorManger.black),
+            textAlign: TextAlign.center,
+            ),
+          ),
           Padding(
               padding:  EdgeInsets.symmetric( vertical: AppSize.size(context).width * .01),
               child: Container(width: 1,color: ColorManger.primary,height: AppSize.size(context).height * .05,)),
 
-          Text(secondTxt,style: getBoldStyle(
-              fontSize: AppSize.size(context).width * .042,
-              color:secondTextColor)),
+          Expanded(
+            child: Text(secondTxt,style: getBoldStyle(
+                fontSize: AppSize.size(context).width * .035,
+                color:secondTextColor),
+              textAlign: TextAlign.center,
+            ),
+          ),
         ],
       ),
     );
