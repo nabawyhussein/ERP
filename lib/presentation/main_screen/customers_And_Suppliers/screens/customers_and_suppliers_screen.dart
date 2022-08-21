@@ -9,8 +9,8 @@ import '../../../common_widget/buid_app_bar.dart';
 import '../../../common_widget/common_list_tile_row_data_widget.dart';
 import '../../../resources/font_manger.dart';
 
-class TreasuryAndBondsScreens extends StatelessWidget {
-  const TreasuryAndBondsScreens({Key? key}) : super(key: key);
+class CustomersAndSuppliersScreen extends StatelessWidget {
+  const CustomersAndSuppliersScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class TreasuryAndBondsScreens extends StatelessWidget {
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(AppSize.size(context).height * .06),
           child:  CommonAppBar(
-            title: LocaleKeys.treasury.tr(),
+            title: LocaleKeys.customersAndSuppliers.tr(),
           )),
       body: SingleChildScrollView(
         padding: EdgeInsets.zero,
@@ -32,27 +32,23 @@ class TreasuryAndBondsScreens extends StatelessWidget {
                     horizontal: AppSize.size(context).width * 0.085),
                 child: Column(
                   children: [
-                     CommonContainerTwoTextRow(
-                        firstTxt: LocaleKeys.currentBalance.tr(),
-                        secondTxt: LocaleKeys.Creditor.tr()+" 151230",
-                        secondTextColor: Colors.red),
                     const CreditorAndDebtorRowWidget(),
-                     CommonContainerTwoTextRow(
-                      firstTxt: LocaleKeys.addDocument.tr(),
+                    CommonContainerTwoTextRow(
+                      firstTxt: LocaleKeys.addMovement.tr(),
                       secondTxt:LocaleKeys.movementsReport.tr() ,
                     ),
                     SizedBox(
                       height: AppSize.size(context).height * 0.02,
                     ),
-                    const PrintSearchRowIconsWidget(),
+                    const PrintSearchRowIconsWidget(showPrinter: false),
                   ],
                 )),
 
-            CommonListTileDataWidget(titleTxt: LocaleKeys.documentNum.tr(),
+            CommonListTileDataWidget(titleTxt: "ATMA",
               subTitleTxt: LocaleKeys.lastMove.tr() +" 12/12/2022 ",
-              statusTxt: ' 3200 '+ LocaleKeys.Creditor.tr(), circleTxt: '110',),
+              statusTxt: ' 3200 '+ LocaleKeys.Creditor.tr(), circleTxt: 'A',),
 
-            BuildButtonWidget(txt: LocaleKeys.addDocument.tr(),darkGrey: false,onPressed: (){},),
+            BuildButtonWidget(txt: LocaleKeys.addClient.tr(),darkGrey: false,onPressed: (){},),
           ],
         ),
       ),

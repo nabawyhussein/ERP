@@ -21,7 +21,7 @@ class CommonContainerTwoTextRow extends StatelessWidget {
         children: [
           Expanded(
             child: Text(firstTxt,style: getBoldStyle(
-                fontSize: AppSize.size(context).width * .035,
+                fontSize: AppSize.size(context).width * .037,
                 color: ColorManger.black),
             textAlign: TextAlign.center,
             ),
@@ -32,7 +32,7 @@ class CommonContainerTwoTextRow extends StatelessWidget {
 
           Expanded(
             child: Text(secondTxt,style: getBoldStyle(
-                fontSize: AppSize.size(context).width * .035,
+                fontSize: AppSize.size(context).width * .037,
                 color:secondTextColor),
               textAlign: TextAlign.center,
             ),

@@ -4,7 +4,8 @@ import 'package:labeeb_front/presentation/resources/font_manger.dart';
 import '../resources/color_manger.dart';
 
 class PrintSearchRowIconsWidget extends StatelessWidget {
-  const PrintSearchRowIconsWidget({Key? key}) : super(key: key);
+  const PrintSearchRowIconsWidget({Key? key,this.showPrinter=true}) : super(key: key);
+  final bool ?showPrinter;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class PrintSearchRowIconsWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          iconBuilder(icon: Icons.print, onTap: () {  }, context: context),
+          showPrinter! ?  iconBuilder(icon: Icons.print, onTap: () {  }, context: context):Container(),
           iconBuilder(icon: Icons.remove_red_eye_rounded, onTap: () {  }, context: context),
           iconBuilder(icon: Icons.search, onTap: () {  }, context: context),
         ],

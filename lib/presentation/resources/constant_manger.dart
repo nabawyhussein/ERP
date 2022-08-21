@@ -39,7 +39,7 @@ class AppConstant {
   ];
   static List<HomeModel> homeList = [
     HomeModel(txtAr: AppString.treasuryAndBondsAra,txtEn: AppString.treasuryAndBondsEng,nextScreen: Routes.treasuryAndBondsScreens),
-    HomeModel(txtAr: AppString.customersAndSuppliersAra,txtEn: AppString.customersAndSuppliersEng,nextScreen: Routes.startScreen),
+    HomeModel(txtAr: AppString.customersAndSuppliersAra,txtEn: AppString.customersAndSuppliersEng,nextScreen: Routes.customersAndSuppliersScreen),
     HomeModel(txtAr: AppString.invoicesAra,txtEn: AppString.invoicesEng,nextScreen: Routes.startScreen),
     HomeModel(txtAr: AppString.dailyNoteBookAra,txtEn: AppString.dailyNoteBookEng,nextScreen: Routes.startScreen),
     HomeModel(txtAr: AppString.pricesOffersAra,txtEn: AppString.pricesOffersEng,nextScreen: Routes.startScreen),
