@@ -34,7 +34,7 @@ appTheme() {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
           textStyle: getRegularStyle(color: ColorManger.white, fontSize: 20),
-          primary: ColorManger.primary,
+          primary: ColorManger.black,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25))),
     ),

@@ -14,44 +14,23 @@ class BuildButtonWidget extends StatelessWidget {
       this.txt,
       this.darkGrey = false,
       this.onPressed,
-      this.rowIcon = false})
+      })
       : super(key: key);
   final String? txt;
   final bool? darkGrey;
-  final bool? rowIcon;
   final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: darkGrey == true ? ColorManger.black : null,
+        primary: darkGrey == true ? ColorManger.primary : null,
         minimumSize: Size(AppSize.size(context).width * .65,
             AppSize.size(context).height * .056),
         //padding: EdgeInsets.symmetric(horizontal: AppSize.size(context).width * .25,vertical: 10),
       ),
       onPressed: onPressed,
-      child: rowIcon == true
-          ? Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const CircleAvatar(
-                  backgroundColor: ColorManger.white,
-                  radius: 15,
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.black,
-                  ),
-                ),
-                Text(txt!,
-                    style: getRegularRobotoStyle(
-                        color: ColorManger.white,
-                        fontSize: AppSize.size(context).width * .045)),
-                SvgPicture.asset(AppIcons.appLocationIcon,
-                    width: AppSize.size(context).width * .045),
-              ],
-            )
-          : Text(txt!,
+      child:Text(txt!,
               style: getRegularRobotoStyle(
                   color: ColorManger.white,
                   fontSize: AppSize.size(context).width * .045)),

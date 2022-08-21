@@ -15,8 +15,8 @@ class CommonContainerTwoTextRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      width: AppSize.size(context).width * .8,
-      padding: EdgeInsets.symmetric(horizontal: AppSize.size(context).width * .06,
+      width: AppSize.size(context).width * .85,
+      padding: EdgeInsets.symmetric(horizontal: AppSize.size(context).width * .08,
       ),
       decoration: BoxDecoration(
         border: Border.all(color: ColorManger.primary),
