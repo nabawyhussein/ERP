@@ -1,5 +1,6 @@
 class HomeModel {
-  String? activeTxt;
-  String? icon;
-  HomeModel({this.icon,this.activeTxt});
+  String? txtAr;
+  String? txtEn;
+  String? nextScreen;
+  HomeModel({this.txtAr,this.txtEn,this.nextScreen});
 }

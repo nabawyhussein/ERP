@@ -3,6 +3,9 @@
 
 
 import 'dart:ui';
+import 'package:labeeb_front/presentation/resources/app_string.dart';
+import 'package:labeeb_front/presentation/resources/routes_manger.dart';
+
 import '../../models/home_model/home_model.dart';
 import '../../models/on_boarding_model/on_boarding_model.dart';
 import 'assets_manger.dart';
@@ -35,9 +38,12 @@ class AppConstant {
             "نص تعبيري يعبر عن شرح التطبيق وما ستفعله \n نص تعبيري يعبر عن شرح التطبيق وما ستفعله"),
   ];
   static List<HomeModel> homeList = [
-    HomeModel(activeTxt: "first",icon: AppIcons.appOrdersIcon),
-    HomeModel(activeTxt: "seconde",icon: AppIcons.appShippingBoxIcon),
-    HomeModel(activeTxt: "third",icon: AppIcons.appLibraryBooksIcon),
+    HomeModel(txtAr: AppString.treasuryAndBondsAra,txtEn: AppString.treasuryAndBondsEng,nextScreen: Routes.loginScreen),
+    HomeModel(txtAr: AppString.customersAndSuppliersAra,txtEn: AppString.customersAndSuppliersEng,nextScreen: Routes.startScreen),
+    HomeModel(txtAr: AppString.invoicesAra,txtEn: AppString.invoicesEng,nextScreen: Routes.startScreen),
+    HomeModel(txtAr: AppString.dailyNoteBookAra,txtEn: AppString.dailyNoteBookEng,nextScreen: Routes.startScreen),
+    HomeModel(txtAr: AppString.pricesOffersAra,txtEn: AppString.pricesOffersEng,nextScreen: Routes.startScreen),
+    HomeModel(txtAr: AppString.inventoryAra,txtEn: AppString.inventoryEng,nextScreen: Routes.startScreen),
   ];
 }
 

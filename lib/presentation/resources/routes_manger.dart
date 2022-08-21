@@ -3,7 +3,7 @@ import 'package:labeeb_front/presentation/main_screen/auth/screens/register_scre
 import 'package:labeeb_front/presentation/resources/route_animatin.dart';
 import '../main_screen/auth/screens/login_screen.dart';
 import '../main_screen/on_boarding/screens/on_boarding_screen.dart';
-import '../main_screen/select_main_category/select_main_category_screen.dart';
+import '../main_screen/select_main_category/screens/select_main_category_screen.dart';
 import '../main_screen/splash/splash_screen.dart';
 import '../main_screen/start/start_screen.dart';
 
