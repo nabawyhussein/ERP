@@ -12,12 +12,13 @@ class HomeMainCategoriesBuilderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
         shrinkWrap: true,
+        padding: EdgeInsets.symmetric(vertical: AppSize.size(context).height * .015),
         physics: const ScrollPhysics(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: AppSize.size(context).width * 0.45,
             mainAxisSpacing: 15.0,
             crossAxisSpacing: 15.0,
-            childAspectRatio: 1/ 1),
+            childAspectRatio: 1.08/ 1),
         //padding: const EdgeInsets.all(20.0),
         itemCount: AppConstant.homeList.length,
         itemBuilder: (context, index) => InkWell(

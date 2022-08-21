@@ -40,7 +40,7 @@ class RouteGenerator {
       case Routes.onBoardingScreen:
         return createRoute(OnBoardingScreen());
         case Routes.selectMainCategoryScreen:
-        return createRoute(SelectMainCategoryScreen());
+        return createRoute(const SelectMainCategoryScreen());
       default:
         return unDefinedRoute();
     }
