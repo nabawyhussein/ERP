@@ -1,12 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:labeeb_front/presentation/common_widget/build_button_widget.dart';
-import 'package:labeeb_front/presentation/common_widget/common_two_text_row_container.dart';
-import 'package:labeeb_front/presentation/common_widget/date_from_to_column_widget.dart';
 import 'package:labeeb_front/presentation/main_screen/invoices/widgets/purchase_Invoices_widget.dart';
 import 'package:labeeb_front/translations/locale_keys.g.dart';
+
 import '../../../common_widget/buid_app_bar.dart';
-import '../../../common_widget/common_list_tile_row_data_widget.dart';
 import '../../../resources/color_manger.dart';
 import '../../../resources/font_manger.dart';
 import '../../../resources/style_manger.dart';
@@ -18,24 +16,28 @@ class InvoicesScreen extends StatefulWidget {
   State<InvoicesScreen> createState() => _InvoicesScreenState();
 }
 
-class _InvoicesScreenState extends State<InvoicesScreen> with SingleTickerProviderStateMixin{
+class _InvoicesScreenState extends State<InvoicesScreen>
+    with SingleTickerProviderStateMixin {
   TabController? invoicesTabController;
+
   void initState() {
     // TODO: implement initState
     super.initState();
     invoicesTabController = TabController(vsync: this, length: 4);
   }
+
   @override
   void dispose() {
     invoicesTabController!.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(AppSize.size(context).height * .06),
-          child:  CommonAppBar(
+          child: CommonAppBar(
             title: LocaleKeys.Invoices.tr(),
           )),
       body: Column(
@@ -48,19 +50,20 @@ class _InvoicesScreenState extends State<InvoicesScreen> with SingleTickerProvid
                 Stack(
                   children: [
                     Positioned.fill(
-                        child: Container(decoration: const BoxDecoration(
-                          border:  Border(
-                            bottom: BorderSide(
-                              color: ColorManger.dividerColor,
-                              width: 2.0,
-                            ),
+                        child: Container(
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: ColorManger.dividerColor,
+                            width: 2.0,
                           ),
-                        ),)),
+                        ),
+                      ),
+                    )),
                     TabBar(
                       controller: invoicesTabController,
                       indicatorColor: ColorManger.primary,
                       indicatorPadding: EdgeInsets.zero,
-
                       indicatorSize: TabBarIndicatorSize.tab,
                       indicatorWeight: 2,
                       labelColor: ColorManger.primary,
@@ -98,36 +101,36 @@ class _InvoicesScreenState extends State<InvoicesScreen> with SingleTickerProvid
                       const PurchaseInvoicesWidget(),
                       Center(
                           child: Text(
-                            LocaleKeys.sorryThereAreNoPreviousRequests.tr(),
-                            style: getSemiBoldStyle(
-                                color: ColorManger.grey,
-                                fontSize: AppSize.size(context).width * .045),
-                          )),
+                        LocaleKeys.sorryThereAreNoPreviousRequests.tr(),
+                        style: getSemiBoldStyle(
+                            color: ColorManger.grey,
+                            fontSize: AppSize.size(context).width * .045),
+                      )),
                       Center(
                           child: Text(
-                            LocaleKeys.sorryThereAreNoPreviousRequests.tr(),
-                            style: getSemiBoldStyle(
-                                color: ColorManger.grey,
-                                fontSize: AppSize.size(context).width * .045),
-                          )),
+                        LocaleKeys.sorryThereAreNoPreviousRequests.tr(),
+                        style: getSemiBoldStyle(
+                            color: ColorManger.grey,
+                            fontSize: AppSize.size(context).width * .045),
+                      )),
                       Center(
                           child: Text(
-                            LocaleKeys.sorryThereAreNoPreviousRequests.tr(),
-                            style: getSemiBoldStyle(
-                                color: ColorManger.grey,
-                                fontSize: AppSize.size(context).width * .045),
-                          )),
+                        LocaleKeys.sorryThereAreNoPreviousRequests.tr(),
+                        style: getSemiBoldStyle(
+                            color: ColorManger.grey,
+                            fontSize: AppSize.size(context).width * .045),
+                      )),
                     ],
                   ),
                 ),
-
               ],
             ),
           ),
-
-
-
-          BuildButtonWidget(txt: LocaleKeys.addInvoice.tr(),darkGrey: false,onPressed: (){},),
+          BuildButtonWidget(
+            txt: LocaleKeys.addInvoice.tr(),
+            darkGrey: false,
+            onPressed: () {},
+          ),
           SizedBox(
             height: AppSize.size(context).height * 0.02,
           ),

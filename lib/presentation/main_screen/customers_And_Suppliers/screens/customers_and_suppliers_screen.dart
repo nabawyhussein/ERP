@@ -1,13 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:labeeb_front/presentation/common_widget/build_button_widget.dart';
-import 'package:labeeb_front/presentation/common_widget/common_two_text_row_container.dart';
-import 'package:labeeb_front/presentation/common_widget/creditor_and_debtor_row_widget.dart';
-import 'package:labeeb_front/presentation/common_widget/print_show_search_row_widget.dart';
 import 'package:labeeb_front/presentation/main_screen/customers_And_Suppliers/widgets/customers_widget.dart';
 import 'package:labeeb_front/translations/locale_keys.g.dart';
+
 import '../../../common_widget/buid_app_bar.dart';
-import '../../../common_widget/common_list_tile_row_data_widget.dart';
 import '../../../resources/color_manger.dart';
 import '../../../resources/font_manger.dart';
 import '../../../resources/style_manger.dart';
@@ -16,27 +13,33 @@ class CustomersAndSuppliersScreen extends StatefulWidget {
   const CustomersAndSuppliersScreen({Key? key}) : super(key: key);
 
   @override
-  State<CustomersAndSuppliersScreen> createState() => _CustomersAndSuppliersScreenState();
+  State<CustomersAndSuppliersScreen> createState() =>
+      _CustomersAndSuppliersScreenState();
 }
 
-class _CustomersAndSuppliersScreenState extends State<CustomersAndSuppliersScreen> with SingleTickerProviderStateMixin{
+class _CustomersAndSuppliersScreenState
+    extends State<CustomersAndSuppliersScreen>
+    with SingleTickerProviderStateMixin {
   TabController? customersAndSuppliersTabController;
+
   void initState() {
     // TODO: implement initState
     super.initState();
     customersAndSuppliersTabController = TabController(vsync: this, length: 2);
   }
+
   @override
   void dispose() {
     customersAndSuppliersTabController!.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(AppSize.size(context).height * .06),
-          child:  CommonAppBar(
+          child: CommonAppBar(
             title: LocaleKeys.customersAndSuppliers.tr(),
           )),
       body: Column(
@@ -49,19 +52,20 @@ class _CustomersAndSuppliersScreenState extends State<CustomersAndSuppliersScree
                 Stack(
                   children: [
                     Positioned.fill(
-                        child: Container(decoration:  const BoxDecoration(
-                          border:  Border(
-                            bottom: BorderSide(
-                              color: ColorManger.dividerColor,
-                              width: 3.0,
-                            ),
+                        child: Container(
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: ColorManger.dividerColor,
+                            width: 3.0,
                           ),
-                        ),)),
+                        ),
+                      ),
+                    )),
                     TabBar(
                       controller: customersAndSuppliersTabController,
                       indicatorColor: ColorManger.primary,
                       indicatorPadding: EdgeInsets.zero,
-
                       indicatorSize: TabBarIndicatorSize.tab,
                       indicatorWeight: 3,
                       labelColor: ColorManger.primary,
@@ -90,22 +94,22 @@ class _CustomersAndSuppliersScreenState extends State<CustomersAndSuppliersScree
                       CustomersWidget(),
                       Center(
                           child: Text(
-                            LocaleKeys.sorryThereAreNoPreviousRequests.tr(),
-                            style: getSemiBoldStyle(
-                                color: ColorManger.grey,
-                                fontSize: AppSize.size(context).width * .045),
-                          ))
+                        LocaleKeys.sorryThereAreNoPreviousRequests.tr(),
+                        style: getSemiBoldStyle(
+                            color: ColorManger.grey,
+                            fontSize: AppSize.size(context).width * .045),
+                      ))
                     ],
                   ),
                 ),
-
               ],
             ),
           ),
-
-
-
-          BuildButtonWidget(txt: LocaleKeys.addClient.tr(),darkGrey: false,onPressed: (){},),
+          BuildButtonWidget(
+            txt: LocaleKeys.addClient.tr(),
+            darkGrey: false,
+            onPressed: () {},
+          ),
           SizedBox(
             height: AppSize.size(context).height * 0.02,
           ),

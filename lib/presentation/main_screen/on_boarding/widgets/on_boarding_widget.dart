@@ -42,37 +42,33 @@ class OnBoardingWidget extends StatelessWidget {
           SizedBox(
             height: AppSize.size(context).height * .008,
           ),
-          Text(AppConstant.onBoardingLists[pos].des!,style: getRegularStyle(
-              fontSize: AppSize.size(context).width * .043,
-              color: ColorManger.black),
-          textAlign: TextAlign.center,
+          Text(
+            AppConstant.onBoardingLists[pos].des!,
+            style: getRegularStyle(
+                fontSize: AppSize.size(context).width * .043,
+                color: ColorManger.black),
+            textAlign: TextAlign.center,
           ),
           SizedBox(
             height: AppSize.size(context).height * .05,
           ),
           // Spacer(),
-          BuildButtonWidget(txt: LocaleKeys.next.tr(), onPressed: () {
-            if (pos == 0) {
-              controller.animateTo(
-                  MediaQuery.of(context).size.width,
-                  duration:
-                  const Duration(milliseconds: 500),
-                  curve: Curves.easeInOut);
-            }
-            else if (pos == 1)
-            {
-              controller.animateTo(
-                  MediaQuery.of(context).size.width *
-                      (pos + 1),
-                  duration:
-                  const Duration(milliseconds: 500),
-                  curve: Curves.easeInOut);
-            } 
-            else if (pos == 2) {
-
-              Navigator.pushNamed(context, Routes.loginScreen);
-            }
-          }),
+          BuildButtonWidget(
+              txt: LocaleKeys.next.tr(),
+              onPressed: () {
+                if (pos == 0) {
+                  controller.animateTo(MediaQuery.of(context).size.width,
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.easeInOut);
+                } else if (pos == 1) {
+                  controller.animateTo(
+                      MediaQuery.of(context).size.width * (pos + 1),
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.easeInOut);
+                } else if (pos == 2) {
+                  Navigator.pushNamed(context, Routes.loginScreen);
+                }
+              }),
           SizedBox(
             height: AppSize.size(context).height * .018,
           ),

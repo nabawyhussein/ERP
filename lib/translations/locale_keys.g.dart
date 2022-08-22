@@ -1,6 +1,6 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
-abstract class  LocaleKeys {
+abstract class LocaleKeys {
   static const next = 'next';
   static const skip = 'skip';
   static const login = 'login';
@@ -9,7 +9,8 @@ abstract class  LocaleKeys {
   static const welcomeToTheAtmaApp = 'welcomeToTheAtmaApp';
   static const makeYourDataSafe = 'makeYourDataSafe';
   static const password = 'password';
-  static const pleaseEnterTheMobileNumberToSendTheVerificationCode = 'pleaseEnterTheMobileNumberToSendTheVerificationCode';
+  static const pleaseEnterTheMobileNumberToSendTheVerificationCode =
+      'pleaseEnterTheMobileNumberToSendTheVerificationCode';
   static const enterYourEmail = 'enterYourEmail';
   static const send = 'send';
   static const firstname = 'firstname';
@@ -21,11 +22,13 @@ abstract class  LocaleKeys {
   static const serviceSite = 'serviceSite';
   static const home = 'home';
   static const shipMe = 'shipMe';
-  static const sendYourShipmentAnyWhereYouWant = 'sendYourShipmentAnyWhereYouWant';
+  static const sendYourShipmentAnyWhereYouWant =
+      'sendYourShipmentAnyWhereYouWant';
   static const getMe = 'getMe';
   static const requestAServiceYouWantUsToDo = 'requestAServiceYouWantUsToDo';
   static const myOrders = 'myOrders';
-  static const keepTrackOfYourCurrentAndPastOrders = 'keepTrackOfYourCurrentAndPastOrders';
+  static const keepTrackOfYourCurrentAndPastOrders =
+      'keepTrackOfYourCurrentAndPastOrders';
   static const sender = 'sender';
   static const theRecipient = 'theRecipient';
   static const pleaseEnterTheRecipientData = 'pleaseEnterTheRecipientData';
@@ -41,7 +44,8 @@ abstract class  LocaleKeys {
   static const theRecipientName = 'theRecipientName';
   static const current = 'current';
   static const previous = 'previous';
-  static const sorryThereAreNoPreviousRequests = 'sorryThereAreNoPreviousRequests';
+  static const sorryThereAreNoPreviousRequests =
+      'sorryThereAreNoPreviousRequests';
   static const orderNumber = 'orderNumber';
   static const from = 'from';
   static const to = 'to';
@@ -98,5 +102,4 @@ abstract class  LocaleKeys {
   static const catchReceipt = 'catchReceipt';
   static const receipt = 'receipt';
   static const email = 'email';
-
 }

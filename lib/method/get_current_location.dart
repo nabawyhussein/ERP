@@ -38,5 +38,4 @@ class GetCurrentLocation {
   static Future<Position> getGeoLocationPosition() async {
     return _getGeoLocationPosition();
   }
-
 }

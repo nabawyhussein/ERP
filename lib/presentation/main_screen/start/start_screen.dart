@@ -1,8 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:labeeb_front/presentation/resources/color_manger.dart';
 import 'package:labeeb_front/presentation/resources/font_manger.dart';
-import 'package:labeeb_front/presentation/resources/style_manger.dart';
 
 import '../../common_widget/build_button_widget.dart';
 import '../../common_widget/build_logo_widget.dart';

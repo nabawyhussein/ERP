@@ -12,9 +12,9 @@ class CreditorAndDebtorRowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: AppSize.size(context).height*0.025,
-          horizontal: AppSize.size(context).width*0.09
-      ),
+      padding: EdgeInsets.symmetric(
+          vertical: AppSize.size(context).height * 0.025,
+          horizontal: AppSize.size(context).width * 0.09),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

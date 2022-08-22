@@ -20,13 +20,14 @@ class LocationCubit extends Cubit<LocationState> {
   Set<Marker> locationMarkersAddRecipient = Set.of([]);
   List<Address>? codedAddress;
   List<Address>? codedAddressAddRecipient;
-   List<List<Address>>? codedAddressAddRecipientList = [];
+  List<List<Address>>? codedAddressAddRecipientList = [];
   Set<Marker> customMarkers = <Marker>{};
 
   Future<Position?> getGeoLocation() async {
     position = await GetCurrentLocation.getGeoLocationPosition();
-    codedAddress = await Geocoder.local.findAddressesFromCoordinates(Coordinates(position!.latitude, position!.longitude));
-   // positionAddRecipient!.add(position!);
+    codedAddress = await Geocoder.local.findAddressesFromCoordinates(
+        Coordinates(position!.latitude, position!.longitude));
+    // positionAddRecipient!.add(position!);
     //positionAddRecipient![0] = await GetCurrentLocation.getGeoLocationPosition();
     //codedAddressAddRecipient = await Geocoder.local.findAddressesFromCoordinates(Coordinates(positionAddRecipient![0].latitude, positionAddRecipient![0].longitude));
     return position;
@@ -59,16 +60,16 @@ class LocationCubit extends Cubit<LocationState> {
     );
   }
 
-   setMarkerAddRecipient({LatLng? latLng}) async {
-    Uint8List destinationImageData = await convertAssetToUnit8List(
-       AppImages.userMarker , width: 120
-    );
-   // positionAddRecipient.add(latLng!)
+  setMarkerAddRecipient({LatLng? latLng}) async {
+    Uint8List destinationImageData =
+        await convertAssetToUnit8List(AppImages.userMarker, width: 120);
+    // positionAddRecipient.add(latLng!)
     locationMarkersAddRecipient = Set.of([]);
-    if(latLng != null){
+    if (latLng != null) {
       codedAddressAddRecipient = [];
-      codedAddressAddRecipient = await Geocoder.local.findAddressesFromCoordinates(
-          Coordinates(latLng.latitude, latLng.longitude));
+      codedAddressAddRecipient = await Geocoder.local
+          .findAddressesFromCoordinates(
+              Coordinates(latLng.latitude, latLng.longitude));
       String address = codedAddressAddRecipient!.first.addressLine!;
       codedAddressAddRecipientList!.add(codedAddressAddRecipient!);
       // for(int i = 0; i < codedAddressAddRecipientList!.length; i++){
@@ -81,7 +82,7 @@ class LocationCubit extends Cubit<LocationState> {
         position: latLng,
         icon: BitmapDescriptor.fromBytes(destinationImageData),
       ));
-    }else{
+    } else {
       locationMarkersAddRecipient.add(Marker(
         markerId: MarkerId(position!.toString()),
         position: LatLng(position!.latitude, position!.longitude),
@@ -89,13 +90,17 @@ class LocationCubit extends Cubit<LocationState> {
       ));
     }
 
-   // setState(() {});
+    // setState(() {});
   }
 
-  Future<Uint8List> convertAssetToUnit8List(String imagePath, {int width = 50}) async {
+  Future<Uint8List> convertAssetToUnit8List(String imagePath,
+      {int width = 50}) async {
     ByteData data = await rootBundle.load(imagePath);
-    Codec codec = await instantiateImageCodec(data.buffer.asUint8List(), targetWidth: width);
+    Codec codec = await instantiateImageCodec(data.buffer.asUint8List(),
+        targetWidth: width);
     FrameInfo fi = await codec.getNextFrame();
-    return (await fi.image.toByteData(format: ImageByteFormat.png))!.buffer.asUint8List();
+    return (await fi.image.toByteData(format: ImageByteFormat.png))!
+        .buffer
+        .asUint8List();
   }
 }

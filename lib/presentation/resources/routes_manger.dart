@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:labeeb_front/presentation/main_screen/auth/screens/register_screen.dart';
 import 'package:labeeb_front/presentation/main_screen/prices_offers/screens/prices_offers_screen.dart';
 import 'package:labeeb_front/presentation/resources/route_animatin.dart';
+
 import '../main_screen/auth/screens/login_screen.dart';
 import '../main_screen/customers_And_Suppliers/screens/customers_and_suppliers_screen.dart';
 import '../main_screen/daily_restrictions/screens/daily_restrictions_screen.dart';
@@ -27,16 +28,23 @@ class Routes {
 
   ///register screen
   static const String registerScreen = "/registerScreen";
+
   /// SelectMainCategoryScreen
   static const String selectMainCategoryScreen = "/SelectMainCategoryScreen";
+
   /// TreasuryAndBondsScreens
   static const String treasuryAndBondsScreens = "/TreasuryAndBondsScreens";
+
   /// TreasuryAndBondsScreens
-  static const String customersAndSuppliersScreen = "/CustomersAndSuppliersScreen";
+  static const String customersAndSuppliersScreen =
+      "/CustomersAndSuppliersScreen";
+
   /// InvoicesScreen
   static const String invoicesScreen = "/InvoicesScreen";
+
   /// DailyRestrictionsScreen
   static const String dailyRestrictionsScreen = "/DailyRestrictionsScreen";
+
   /// DailyRestrictionsScreen
   static const String pricesOffersScreen = "/PricesOffersScreen";
 }
@@ -54,13 +62,13 @@ class RouteGenerator {
         return createRoute(RegisterScreen());
       case Routes.onBoardingScreen:
         return createRoute(OnBoardingScreen());
-        case Routes.selectMainCategoryScreen:
+      case Routes.selectMainCategoryScreen:
         return createRoute(const SelectMainCategoryScreen());
-        case Routes.dailyRestrictionsScreen:
+      case Routes.dailyRestrictionsScreen:
         return createRoute(const DailyRestrictionsScreen());
-        case Routes.pricesOffersScreen:
+      case Routes.pricesOffersScreen:
         return createRoute(const PricesOffersScreen());
-        case Routes.treasuryAndBondsScreens:
+      case Routes.treasuryAndBondsScreens:
         return createRouteForStateFul(const TreasuryAndBondsScreens());
       case Routes.customersAndSuppliersScreen:
         return createRouteForStateFul(const CustomersAndSuppliersScreen());

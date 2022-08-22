@@ -100,7 +100,8 @@ class LoginScreen extends StatelessWidget {
                         txt: LocaleKeys.login.tr(),
                         onPressed: () {
                           if (formKey.currentState!.validate() == true) {
-                            Navigator.pushNamed(context, Routes.selectMainCategoryScreen);
+                            Navigator.pushNamed(
+                                context, Routes.selectMainCategoryScreen);
                           }
                         },
                       ),

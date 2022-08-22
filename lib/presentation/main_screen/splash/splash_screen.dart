@@ -1,10 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:labeeb_front/presentation/resources/routes_manger.dart';
 
-import '../../../bloc/location_bloc/location_cubit.dart';
 import '../../common_widget/build_logo_widget.dart';
 import '../../resources/constant_manger.dart';
 
@@ -27,7 +25,6 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   _goNextScreen() {
-    // addMarker(locationCubit);
     Navigator.pushReplacementNamed(context, Routes.startScreen);
   }
 

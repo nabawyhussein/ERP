@@ -3,7 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'constant_manger.dart';
 import 'font_manger.dart';
 
-TextStyle _getTextStyleArabic(double fontSize, FontWeight fontWeight, Color color) {
+TextStyle _getTextStyleArabic(
+    double fontSize, FontWeight fontWeight, Color color) {
   return TextStyle(
       fontSize: fontSize,
       fontWeight: fontWeight,
@@ -35,6 +36,7 @@ TextStyle getRegularStyle({double fontSize = 12, Color? color}) {
       ? _getTextStylePoppins(fontSize, FontWeightManger.regular, color!)
       : _getTextStyleArabic(fontSize, FontWeightManger.regular, color!);
 }
+
 ///RobotoRegular Style
 TextStyle getRegularRobotoStyle({double fontSize = 12, Color? color}) {
   return AppConstant.locale == const Locale('en')
@@ -66,17 +68,12 @@ TextStyle getBoldStyle({
       : _getTextStyleArabic(fontSize, FontWeightManger.bold, color!);
 }
 
-
 ///semibold Style
 TextStyle getSemiBoldStyle({double fontSize = 12, Color? color}) {
   return AppConstant.locale == const Locale('en')
       ? _getTextStylePoppins(fontSize, FontWeightManger.semiBold, color!)
       : _getTextStyleArabic(fontSize, FontWeightManger.semiBold, color!);
 }
-
-
-
-
 
 ///Robotosemibold Style
 TextStyle getRobotoSemiBoldStyle({double fontSize = 12, Color? color}) {

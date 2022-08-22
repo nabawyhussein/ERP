@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:labeeb_front/presentation/main_screen/select_main_category/widgets/home_main_categories_builder_widget.dart';
+
 import '../../../../translations/locale_keys.g.dart';
 import '../../../common_widget/build_logo_widget.dart';
 import '../../../common_widget/build_row_icon_drawer.dart';
@@ -15,7 +16,7 @@ class SelectMainCategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  NotificationListener<OverscrollIndicatorNotification>(
+      body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (overscroll) {
           overscroll.disallowIndicator();
           return true;
@@ -35,8 +36,8 @@ class SelectMainCategoryScreen extends StatelessWidget {
                   ),
                   const Center(
                       child: BuildLogoWidget(
-                        img: AppImages.appLogo,
-                      )),
+                    img: AppImages.appLogo,
+                  )),
                   //  Image.asset("assets/images/login.png",fit: BoxFit.contain,height: Constant.size(context).height * .35),
                   SizedBox(
                     height: AppSize.size(context).height * .03,
@@ -50,19 +51,17 @@ class SelectMainCategoryScreen extends StatelessWidget {
                     ),
                   ),
 
-                  const HomeMainCategoriesBuilderWidget() ,
+                  const HomeMainCategoriesBuilderWidget(),
 
                   // SizedBox(
                   //   height: AppSize.size(context).height * .01,
                   // ),
-
                 ],
               ),
             ),
           ),
         ),
       ),
-
     );
   }
 }

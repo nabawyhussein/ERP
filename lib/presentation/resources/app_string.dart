@@ -17,5 +17,4 @@ class AppString {
 
   static const inventoryAra = "المخزون";
   static const inventoryEng = "Inventory";
-
 }

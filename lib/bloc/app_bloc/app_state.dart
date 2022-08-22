@@ -5,6 +5,6 @@ abstract class AppState {}
 
 class AppInitial extends AppState {}
 
-class ReceiveMoneyFromHimSuccess extends AppState{}
+class ReceiveMoneyFromHimSuccess extends AppState {}
 
-class ToggleDrawerState extends AppState{}
+class ToggleDrawerState extends AppState {}
