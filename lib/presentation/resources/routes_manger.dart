@@ -56,8 +56,6 @@ class RouteGenerator {
         return createRoute(OnBoardingScreen());
         case Routes.selectMainCategoryScreen:
         return createRoute(const SelectMainCategoryScreen());
-        case Routes.customersAndSuppliersScreen:
-        return createRoute(const CustomersAndSuppliersScreen());
         case Routes.invoicesScreen:
         return createRoute(const InvoicesScreen());
         case Routes.dailyRestrictionsScreen:
@@ -66,6 +64,8 @@ class RouteGenerator {
         return createRoute(const PricesOffersScreen());
         case Routes.treasuryAndBondsScreens:
         return createRouteForStateFul(const TreasuryAndBondsScreens());
+      case Routes.customersAndSuppliersScreen:
+        return createRouteForStateFul(const CustomersAndSuppliersScreen());
       default:
         return unDefinedRoute();
     }

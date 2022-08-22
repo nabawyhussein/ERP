@@ -31,9 +31,7 @@ class _TreasuryAndBondsScreensState extends State<TreasuryAndBondsScreens>  with
      treasuryTabController!.dispose();
      super.dispose();
    }
-   //vertical: AppSize.size(context).height * 0.02,
-   //                   horizontal: AppSize.size(context).width * 0.085
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(

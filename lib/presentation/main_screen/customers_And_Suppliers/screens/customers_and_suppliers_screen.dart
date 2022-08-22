@@ -7,11 +7,29 @@ import 'package:labeeb_front/presentation/common_widget/print_show_search_row_wi
 import 'package:labeeb_front/translations/locale_keys.g.dart';
 import '../../../common_widget/buid_app_bar.dart';
 import '../../../common_widget/common_list_tile_row_data_widget.dart';
+import '../../../resources/color_manger.dart';
 import '../../../resources/font_manger.dart';
+import '../../../resources/style_manger.dart';
 
-class CustomersAndSuppliersScreen extends StatelessWidget {
+class CustomersAndSuppliersScreen extends StatefulWidget {
   const CustomersAndSuppliersScreen({Key? key}) : super(key: key);
 
+  @override
+  State<CustomersAndSuppliersScreen> createState() => _CustomersAndSuppliersScreenState();
+}
+
+class _CustomersAndSuppliersScreenState extends State<CustomersAndSuppliersScreen> with SingleTickerProviderStateMixin{
+  TabController? customersAndSuppliersTabController;
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    customersAndSuppliersTabController = TabController(vsync: this, length: 2);
+  }
+  @override
+  void dispose() {
+    customersAndSuppliersTabController!.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,37 +38,97 @@ class CustomersAndSuppliersScreen extends StatelessWidget {
           child:  CommonAppBar(
             title: LocaleKeys.customersAndSuppliers.tr(),
           )),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.zero,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          // mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-                padding: EdgeInsets.symmetric(
-                    vertical: AppSize.size(context).height * 0.02,
-                    horizontal: AppSize.size(context).width * 0.085),
-                child: Column(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Column(
+              children: [
+                Stack(
                   children: [
-                    const CreditorAndDebtorRowWidget(),
-                    CommonContainerTwoTextRow(
-                      firstTxt: LocaleKeys.addMovement.tr(),
-                      secondTxt:LocaleKeys.movementsReport.tr() ,
+                    Positioned.fill(
+                        child: Container(decoration:  const BoxDecoration(
+                          border:  Border(
+                            bottom: BorderSide(
+                              color: ColorManger.dividerColor,
+                              width: 3.0,
+                            ),
+                          ),
+                        ),)),
+                    TabBar(
+                      controller: customersAndSuppliersTabController,
+                      indicatorColor: ColorManger.primary,
+                      indicatorPadding: EdgeInsets.zero,
+
+                      indicatorSize: TabBarIndicatorSize.tab,
+                      indicatorWeight: 3,
+                      labelColor: ColorManger.primary,
+                      unselectedLabelStyle: getBoldStyle(
+                          fontSize: AppSize.size(context).width * .05,
+                          color: ColorManger.black),
+                      labelStyle: getBoldStyle(
+                          fontSize: AppSize.size(context).width * .055,
+                          color: ColorManger.black),
+                      unselectedLabelColor: ColorManger.dividerColor,
+                      tabs: [
+                        Tab(
+                          text: LocaleKeys.customers.tr(),
+                        ),
+                        Tab(
+                          text: LocaleKeys.Suppliers.tr(),
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: AppSize.size(context).height * 0.02,
-                    ),
-                    const PrintSearchRowIconsWidget(showPrinter: false),
                   ],
-                )),
+                ),
+                Expanded(
+                  child: TabBarView(
+                    controller: customersAndSuppliersTabController,
+                    children: [
+                      Column(
+                        children: [
+                          Padding(
+                              padding: EdgeInsets.symmetric(
+                                  vertical: AppSize.size(context).height * 0.02,
+                                  horizontal: AppSize.size(context).width * 0.085),
+                              child: Column(
+                                children: [
+                                  const CreditorAndDebtorRowWidget(),
+                                  CommonContainerTwoTextRow(
+                                    firstTxt: LocaleKeys.addMovement.tr(),
+                                    secondTxt:LocaleKeys.movementsReport.tr() ,
+                                  ),
+                                  SizedBox(
+                                    height: AppSize.size(context).height * 0.02,
+                                  ),
+                                  const PrintSearchRowIconsWidget(showPrinter: false),
+                                ],
+                              )),
+                          CommonListTileDataWidget(titleTxt: "ATMA",
+                            subTitleTxt: LocaleKeys.lastMove.tr() +" 12/12/2022 ",
+                            statusTxt: ' 3200 '+ LocaleKeys.Creditor.tr(), circleTxt: 'A',),
+                        ],
+                      ),
+                      Center(
+                          child: Text(
+                            LocaleKeys.sorryThereAreNoPreviousRequests.tr(),
+                            style: getSemiBoldStyle(
+                                color: ColorManger.grey,
+                                fontSize: AppSize.size(context).width * .045),
+                          ))
+                    ],
+                  ),
+                ),
 
-            CommonListTileDataWidget(titleTxt: "ATMA",
-              subTitleTxt: LocaleKeys.lastMove.tr() +" 12/12/2022 ",
-              statusTxt: ' 3200 '+ LocaleKeys.Creditor.tr(), circleTxt: 'A',),
+              ],
+            ),
+          ),
 
-            BuildButtonWidget(txt: LocaleKeys.addClient.tr(),darkGrey: false,onPressed: (){},),
-          ],
-        ),
+
+
+          BuildButtonWidget(txt: LocaleKeys.addClient.tr(),darkGrey: false,onPressed: (){},),
+        ],
       ),
     );
   }
