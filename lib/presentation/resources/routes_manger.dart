@@ -3,6 +3,7 @@ import 'package:labeeb_front/presentation/main_screen/auth/screens/register_scre
 import 'package:labeeb_front/presentation/resources/route_animatin.dart';
 import '../main_screen/auth/screens/login_screen.dart';
 import '../main_screen/customers_And_Suppliers/screens/customers_and_suppliers_screen.dart';
+import '../main_screen/invoices/screens/invoices_screens.dart';
 import '../main_screen/on_boarding/screens/on_boarding_screen.dart';
 import '../main_screen/select_main_category/screens/select_main_category_screen.dart';
 import '../main_screen/splash/splash_screen.dart';
@@ -30,6 +31,8 @@ class Routes {
   static const String treasuryAndBondsScreens = "/TreasuryAndBondsScreens";
   /// TreasuryAndBondsScreens
   static const String customersAndSuppliersScreen = "/CustomersAndSuppliersScreen";
+  /// InvoicesScreen
+  static const String invoicesScreen = "/InvoicesScreen";
 }
 
 class RouteGenerator {
@@ -51,6 +54,8 @@ class RouteGenerator {
         return createRoute(const TreasuryAndBondsScreens());
         case Routes.customersAndSuppliersScreen:
         return createRoute(const CustomersAndSuppliersScreen());
+        case Routes.invoicesScreen:
+        return createRoute(const InvoicesScreen());
       default:
         return unDefinedRoute();
     }
