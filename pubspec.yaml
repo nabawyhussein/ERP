@@ -30,6 +30,7 @@ dependencies:
   group_radio_button: ^1.2.0
   flutter_zoom_drawer: ^3.0.3
   font_awesome_flutter: ^10.1.0
+  date_time_picker: ^2.1.0
   #maps
   google_maps_flutter: ^2.1.10
   geolocator: ^9.0.1

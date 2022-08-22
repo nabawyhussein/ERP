@@ -31,7 +31,7 @@ class DailyRestrictionsScreen extends StatelessWidget {
                     horizontal: AppSize.size(context).width * 0.085),
                 child: Column(
                   children: [
-                    const DateFromToColumnWidget(),
+                     DateFromToColumnWidget(),
 
                     SizedBox(
                       height: AppSize.size(context).height * 0.03,
