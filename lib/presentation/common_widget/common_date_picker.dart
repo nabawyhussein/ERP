@@ -1,4 +1,5 @@
 import 'package:date_time_picker/date_time_picker.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CustomDatePicker extends StatelessWidget {
@@ -26,7 +27,9 @@ class CustomDatePicker extends StatelessWidget {
       textAlign: TextAlign.center,
       onChanged: onChange,
       validator: (val) {
-        print(val);
+        if (kDebugMode) {
+          print(val);
+        }
         if (val == null || val.isEmpty) {
           return "!!";
         } else {

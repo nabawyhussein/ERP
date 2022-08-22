@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:labeeb_front/presentation/common_widget/print_show_search_row_widget.dart';
 
@@ -87,7 +88,9 @@ class DateFromToColumnWidget extends StatelessWidget {
               endDate: DateTime.now(),
               onChange: (f) {
                 date = DateTime.parse(f);
-                print(date);
+                if (kDebugMode) {
+                  print(date);
+                }
               },
             ),
           ),

@@ -60,7 +60,7 @@ appTheme() {
 
           /// error border style
           errorBorder: const OutlineInputBorder(
-            borderSide: const BorderSide(color: ColorManger.error, width: 1),
+            borderSide:  BorderSide(color: ColorManger.error, width: 1),
             borderRadius: BorderRadius.all(Radius.circular(8)),
           ),
 

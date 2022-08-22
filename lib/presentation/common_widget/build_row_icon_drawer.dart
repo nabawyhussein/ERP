@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -21,7 +22,9 @@ class BuildRowIconDrawer extends StatelessWidget {
             AppCubit customDrawerCubit = BlocProvider.of<AppCubit>(context);
             return IconButton(
               onPressed: () {
-                print("DDOne");
+                if (kDebugMode) {
+                  print("DDOne");
+                }
                 customDrawerCubit.toggleDrawer();
               },
               icon: SvgPicture.asset(AppIcons.appDrawerIcon),
