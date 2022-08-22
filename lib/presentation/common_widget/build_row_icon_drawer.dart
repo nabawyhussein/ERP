@@ -22,10 +22,8 @@ class BuildRowIconDrawer extends StatelessWidget {
             AppCubit customDrawerCubit = BlocProvider.of<AppCubit>(context);
             return IconButton(
               onPressed: () {
-                if (kDebugMode) {
-                  print("DDOne");
-                }
-                customDrawerCubit.toggleDrawer();
+
+                // customDrawerCubit.toggleDrawer();
               },
               icon: SvgPicture.asset(AppIcons.appDrawerIcon),
             );

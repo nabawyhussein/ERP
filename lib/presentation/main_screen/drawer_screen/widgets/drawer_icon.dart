@@ -16,8 +16,7 @@ class DrawerIcon extends StatelessWidget {
         AppCubit customDrawerCubit = BlocProvider.of<AppCubit>(context);
         return IconButton(
           onPressed: () {
-            print("DDOne");
-            customDrawerCubit.toggleDrawer();
+            // customDrawerCubit.toggleDrawer();
           },
           icon: Icon(FontAwesomeIcons.bars, size: 20.0, color: color),
         );
