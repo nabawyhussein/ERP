@@ -15,13 +15,12 @@ class RegisterScreen extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Center(
         child: NotificationListener<OverscrollIndicatorNotification>(
           onNotification: (overscroll) {
@@ -41,7 +40,7 @@ class RegisterScreen extends StatelessWidget {
                   ),
                   const Center(
                       child: BuildLogoWidget(
-                    img: AppImages.appSignUp,
+                    img: AppImages.appLogo,
                   )),
                   //  Image.asset("assets/images/login.png",fit: BoxFit.contain,height: AppSize.size(context).height * .35),
                   SizedBox(
@@ -49,7 +48,7 @@ class RegisterScreen extends StatelessWidget {
                   ),
                   Center(
                     child: Text(
-                      LocaleKeys.welcomeToTheLabeebApp.tr(),
+                      LocaleKeys.welcomeToTheAtmaApp.tr(),
                       style: getBoldStyle(
                           fontSize: AppSize.size(context).width * .0465,
                           color: ColorManger.black),
@@ -89,10 +88,10 @@ class RegisterScreen extends StatelessWidget {
                     height: AppSize.size(context).height * .013,
                   ),
                   BuildTextField(
-                    controller: phoneController,
-                    labelText: LocaleKeys.phone.tr(),
-                    svg: "assets/icons/mobile.svg",
-                    textInputType: TextInputType.phone,
+                    controller: emailController,
+                    labelText: LocaleKeys.email.tr(),
+                    svg: "assets/icons/email_icon.svg",
+                    textInputType: TextInputType.emailAddress,
                   ),
                   SizedBox(
                     height: AppSize.size(context).height * .013,

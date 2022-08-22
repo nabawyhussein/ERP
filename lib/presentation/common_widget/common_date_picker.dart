@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 
 class CustomDatePicker extends StatelessWidget {
   final TextEditingController? controller;
-  final GestureTapCallback? onTap;
   final ValueChanged? onChange;
   final DateTime? startDate;
   final DateTime? endDate;
@@ -13,7 +12,6 @@ class CustomDatePicker extends StatelessWidget {
       {
         this.endDate,
         this.controller,
-        this.onTap,
         this.onChange,
         this.startDate
       });
@@ -21,33 +19,30 @@ class CustomDatePicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: DateTimePicker(
-        type: DateTimePickerType.date,
-        firstDate:startDate?? DateTime.now(),
-        lastDate:endDate?? DateTime(2100),
-        controller: controller,
-        decoration: const InputDecoration(
-          border: InputBorder.none,
-          disabledBorder: InputBorder.none,
-          enabledBorder: InputBorder.none,
-          focusedBorder: InputBorder.none,
+    return DateTimePicker(
+      type: DateTimePickerType.date,
+      firstDate:startDate?? DateTime.now(),
+      lastDate:endDate?? DateTime(2100),
+      controller: controller,
+      decoration: const InputDecoration(
+        border: InputBorder.none,
+        disabledBorder: InputBorder.none,
+        enabledBorder: InputBorder.none,
+        focusedBorder: InputBorder.none,
 
-        ),
-
-        onChanged: onChange,
-        validator: (val) {
-          print(val);
-          if(val==null|| val.isEmpty){
-            return "!!";
-          }
-          else {
-            return null;
-          }
-        },
-        onSaved: (val) => print(val),
       ),
+      textAlign: TextAlign.center,
+      onChanged: onChange,
+      validator: (val) {
+        print(val);
+        if(val==null|| val.isEmpty){
+          return "!!";
+        }
+        else {
+          return null;
+        }
+      },
+      onSaved: (val) => print(val),
     );
   }
 

@@ -6,7 +6,7 @@ abstract class  LocaleKeys {
   static const login = 'login';
   static const youDonNotHaveAnAccount = 'youDonNotHaveAnAccount';
   static const registration = 'registration';
-  static const welcomeToTheLabeebApp = 'welcomeToTheLabeebApp';
+  static const welcomeToTheAtmaApp = 'welcomeToTheAtmaApp';
   static const makeYourDataSafe = 'makeYourDataSafe';
   static const password = 'password';
   static const pleaseEnterTheMobileNumberToSendTheVerificationCode = 'pleaseEnterTheMobileNumberToSendTheVerificationCode';
@@ -97,5 +97,6 @@ abstract class  LocaleKeys {
   static const pricesOffers = 'pricesOffers';
   static const catchReceipt = 'catchReceipt';
   static const receipt = 'receipt';
+  static const email = 'email';
 
 }

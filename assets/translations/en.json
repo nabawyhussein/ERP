@@ -4,7 +4,7 @@
   "login" : "Login",
   "youDonNotHaveAnAccount" : "You don't have an account?",
   "registration" : "Registration",
-  "welcomeToTheLabeebApp" : "Welcome to the Labeeb app",
+  "welcomeToTheAtmaApp" : "Welcome to the  ATMA ERP",
   "makeYourDataSafe" : "Make your data safe",
   "password" : "Password",
   "pleaseEnterTheMobileNumberToSendTheVerificationCode" : "Please enter the mobile number to send the verification code",
@@ -94,5 +94,6 @@
   "pricesOffers": "Prices Offers",
   "documentNum": "Document Number",
   "catchReceipt": "Catch Receipt",
-  "receipt": "Receipt"
+  "receipt": "Receipt",
+  "email": "ُmail"
 }

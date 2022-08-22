@@ -60,7 +60,6 @@ class DateFromToColumnWidget extends StatelessWidget {
 
             Expanded(
               child: CustomDatePicker(
-
                 controller: dateController,
                 startDate: DateTime(2022),
                 endDate: DateTime.now(),

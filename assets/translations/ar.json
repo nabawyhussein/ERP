@@ -4,7 +4,7 @@
   "login" : "دخول",
   "youDonNotHaveAnAccount" : "ليس لديك حساب؟",
   "registration" : "تسجيل",
-  "welcomeToTheLabeebApp" : "مرحبا بك في تطبيق لبيب",
+  "welcomeToTheAtmaApp" : "مرحبا بك في تطبيق  ATMA ERP",
   "makeYourDataSafe" : "إجعل بياناتك آمنة",
   "password" : "كلمة المرور",
   "pleaseEnterTheMobileNumberToSendTheVerificationCode" : "من فضلك أدخل رقم الموبايل لإرسال رمز التحقق",
@@ -94,5 +94,6 @@
   "addRestrictions": "إضافة قيد",
   "pricesOffers": "عروض اسعار",
   "catchReceipt": "سند قبض",
-  "receipt": "سند صرف"
+  "receipt": "سند صرف",
+  "email": "البريد الالكترونى"
 }

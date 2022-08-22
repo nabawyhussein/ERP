@@ -43,7 +43,7 @@ class SelectMainCategoryScreen extends StatelessWidget {
                   ),
                   Center(
                     child: Text(
-                      LocaleKeys.welcomeToTheLabeebApp.tr(),
+                      LocaleKeys.welcomeToTheAtmaApp.tr(),
                       style: getRegularStyle(
                           fontSize: AppSize.size(context).width * .0465,
                           color: ColorManger.black),

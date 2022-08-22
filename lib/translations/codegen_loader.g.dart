@@ -20,7 +20,7 @@ class CodegenLoader extends AssetLoader{
   "login": "دخول",
   "youDonNotHaveAnAccount": "ليس لديك حساب؟",
   "registration": "تسجيل",
-  "welcomeToTheLabeebApp": "مرحبا بك في تطبيق لبيب",
+  "welcomeToTheAtmaApp": "مرحبا بك في تطبيق  ATMA ERP",
   "makeYourDataSafe": "إجعل بياناتك آمنة",
   "password": "كلمة المرور",
   "pleaseEnterTheMobileNumberToSendTheVerificationCode": "من فضلك أدخل رقم الموبايل لإرسال رمز التحقق",
@@ -110,7 +110,8 @@ class CodegenLoader extends AssetLoader{
   "addRestrictions": "إضافة قيد",
   "pricesOffers": "عروض اسعار",
   "catchReceipt": "سند قبض",
-  "receipt": "سند صرف"
+  "receipt": "سند صرف",
+  "email": "البريد الالكترونى"
 };
 static const Map<String,dynamic> en = {
   "next": "next",
@@ -118,7 +119,7 @@ static const Map<String,dynamic> en = {
   "login": "Login",
   "youDonNotHaveAnAccount": "You don't have an account?",
   "registration": "Registration",
-  "welcomeToTheLabeebApp": "Welcome to the Labeeb app",
+  "welcomeToTheAtmaApp": "Welcome to the  ATMA ERP",
   "makeYourDataSafe": "Make your data safe",
   "password": "Password",
   "pleaseEnterTheMobileNumberToSendTheVerificationCode": "Please enter the mobile number to send the verification code",
@@ -208,7 +209,8 @@ static const Map<String,dynamic> en = {
   "pricesOffers": "Prices Offers",
   "documentNum": "Document Number",
   "catchReceipt": "Catch Receipt",
-  "receipt": "Receipt"
+  "receipt": "Receipt",
+  "email": "ُmail"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

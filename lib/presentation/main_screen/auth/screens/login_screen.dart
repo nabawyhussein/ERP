@@ -20,7 +20,6 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Center(
         child: NotificationListener<OverscrollIndicatorNotification>(
           onNotification: (overscroll) {
@@ -50,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     Center(
                       child: Text(
-                        LocaleKeys.welcomeToTheLabeebApp.tr(),
+                        LocaleKeys.welcomeToTheAtmaApp.tr(),
                         style: getRegularStyle(
                             fontSize: AppSize.size(context).width * .0465,
                             color: ColorManger.black),
