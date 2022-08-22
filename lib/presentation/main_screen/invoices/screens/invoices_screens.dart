@@ -128,6 +128,9 @@ class _InvoicesScreenState extends State<InvoicesScreen> with SingleTickerProvid
 
 
           BuildButtonWidget(txt: LocaleKeys.addInvoice.tr(),darkGrey: false,onPressed: (){},),
+          SizedBox(
+            height: AppSize.size(context).height * 0.02,
+          ),
         ],
       ),
     );

@@ -23,7 +23,7 @@ class AppConstant {
         img: "assets/lottie/onBoarding.json",
         titleTxt: "عنوان الصفحة",
         des:
-            "قم بإدارة جميع معاملاتك المالية مع أقوى نظام بين منافسيه بأقصى امان و كفائه"),
+            "قم بإدارة جميع معاملاتك المالية \nمع أقوى نظام بين منافسيه"),
     PageModel(
         img: "assets/lottie/reportdiagram.json",
         //  img: "assets/images/on_boarding2.png",

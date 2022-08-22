@@ -50,8 +50,14 @@ class DailyRestrictionsScreen extends StatelessWidget {
             CommonListTileDataWidget(titleTxt: "ATMA",
               subTitleTxt: LocaleKeys.lastMove.tr() +" 12/12/2022 ",
               statusTxt: ' 3200 '+ LocaleKeys.Creditor.tr(), circleTxt: 'A',),
-
+            CommonListTileDataWidget(titleTxt: "ATMA",
+              subTitleTxt: LocaleKeys.lastMove.tr() +" 12/12/2022 ",
+              statusTxt: ' 3200 '+ LocaleKeys.Creditor.tr(), circleTxt: 'A',),
+            SizedBox(
+              height: AppSize.size(context).height * 0.2,
+            ),
             BuildButtonWidget(txt: LocaleKeys.addRestrictions.tr(),darkGrey: false,onPressed: (){},),
+
           ],
         ),
       ),

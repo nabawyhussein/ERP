@@ -23,8 +23,7 @@ class CommonAppBar extends StatelessWidget {
           BlocProvider.of<AppCubit>(context);
           return IconButton(
             onPressed: () {
-              print("DDOne");
-              customDrawerCubit.toggleDrawer();
+             // customDrawerCubit.toggleDrawer();
             },
             icon: SvgPicture.asset(AppIcons.appDrawerIcon,color: ColorManger.white),);
         },

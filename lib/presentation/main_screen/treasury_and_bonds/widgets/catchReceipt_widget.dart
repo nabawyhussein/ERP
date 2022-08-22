@@ -31,8 +31,14 @@ class CatchReceiptWidget extends StatelessWidget {
         CommonListTileDataWidget(titleTxt: LocaleKeys.documentNum.tr(),
           subTitleTxt: LocaleKeys.lastMove.tr() +" 12/12/2022 ",
           statusTxt: ' 3200 '+ LocaleKeys.Creditor.tr(), circleTxt: '110',),
-
+        CommonListTileDataWidget(titleTxt: LocaleKeys.documentNum.tr(),
+          subTitleTxt: LocaleKeys.lastMove.tr() +" 12/12/2022 ",
+          statusTxt: ' 3200 '+ LocaleKeys.Creditor.tr(), circleTxt: '110',),
+        Spacer(),
         BuildButtonWidget(txt: LocaleKeys.addDocument.tr(),darkGrey: false,onPressed: (){},),
+        SizedBox(
+          height: AppSize.size(context).height * 0.02,
+        ),
       ],
     );
   }

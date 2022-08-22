@@ -106,6 +106,9 @@ class _CustomersAndSuppliersScreenState extends State<CustomersAndSuppliersScree
 
 
           BuildButtonWidget(txt: LocaleKeys.addClient.tr(),darkGrey: false,onPressed: (){},),
+          SizedBox(
+            height: AppSize.size(context).height * 0.02,
+          ),
         ],
       ),
     );
