@@ -65,7 +65,7 @@ class DateFromToColumnWidget extends StatelessWidget {
                       color: ColorManger.black),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 const Icon(Icons.date_range_outlined)

@@ -30,7 +30,7 @@ class OnBoardingWidget extends StatelessWidget {
           ),
           Lottie.asset(AppConstant.onBoardingLists[pos].img!,
               fit: BoxFit.contain, height: AppSize.size(context).height * .4),
-          Spacer(),
+          const Spacer(),
           buildCircleWidget(),
           SizedBox(
             height: AppSize.size(context).height * .05,

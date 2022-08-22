@@ -18,7 +18,7 @@ class StartScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Spacer(),
+            const Spacer(),
             const BuildLogoWidget(),
             SizedBox(
               height: AppSize.size(context).height * .018,
@@ -29,7 +29,7 @@ class StartScreen extends StatelessWidget {
                 darkGrey: true,
                 onPressed: () async {
                   await context.setLocale(AppConstant.arabic);
-                  AppConstant.locale = Locale('ar');
+                  AppConstant.locale = const Locale('ar');
                   Navigator.pushReplacementNamed(
                       context, Routes.onBoardingScreen);
                 }),
@@ -40,7 +40,7 @@ class StartScreen extends StatelessWidget {
                 txt: AppString.english,
                 onPressed: () async {
                   await context.setLocale(AppConstant.english);
-                  AppConstant.locale = Locale('en');
+                  AppConstant.locale = const Locale('en');
                   Navigator.pushReplacementNamed(
                       context, Routes.onBoardingScreen);
                 }),

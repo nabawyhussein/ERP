@@ -82,14 +82,15 @@ class AppExpansionTileState extends State<AppExpansionTile>
     if (_isExpanded != isExpanded) {
       setState(() {
         _isExpanded = isExpanded;
-        if (_isExpanded)
+        if (_isExpanded) {
           _controller!.forward();
-        else
+        } else {
           _controller!.reverse().then<void>((value) {
             setState(() {
               // Rebuild without widget.children.
             });
           });
+        }
         PageStorage.of(context)?.writeState(context, _isExpanded);
       });
       if (widget.onExpansionChanged != null) {

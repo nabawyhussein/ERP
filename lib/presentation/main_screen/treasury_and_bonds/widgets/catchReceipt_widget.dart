@@ -38,7 +38,7 @@ class CatchReceiptWidget extends StatelessWidget {
           statusTxt: ' 3200 ' + LocaleKeys.Creditor.tr(),
           circleTxt: '110',
         ),
-        Spacer(),
+        const Spacer(),
         BuildButtonWidget(
           txt: LocaleKeys.addDocument.tr(),
           darkGrey: false,

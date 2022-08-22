@@ -91,7 +91,7 @@ class _CustomersAndSuppliersScreenState
                   child: TabBarView(
                     controller: customersAndSuppliersTabController,
                     children: [
-                      CustomersWidget(),
+                      const CustomersWidget(),
                       Center(
                           child: Text(
                         LocaleKeys.sorryThereAreNoPreviousRequests.tr(),

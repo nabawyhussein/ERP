@@ -32,8 +32,8 @@ class DrawerScreen extends StatelessWidget {
           height: double.infinity,
           // color: Colors.red,
           margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10.0),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
+          decoration: const BoxDecoration(
+              borderRadius:  BorderRadius.only(
                   bottomLeft: Radius.circular(25),
                   bottomRight: Radius.circular(25))),
           child: ListView(

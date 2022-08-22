@@ -54,7 +54,7 @@ class HomeMainCategoriesBuilderWidget extends StatelessWidget {
                           fontSize: AppSize.size(context).width * .052,
                           color: ColorManger.white),
                     ),
-                    Text("")
+                    const Text("")
                     // Spacer(),
                   ],
                 ),
