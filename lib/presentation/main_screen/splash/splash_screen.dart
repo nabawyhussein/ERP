@@ -22,10 +22,6 @@ class _SplashScreenState extends State<SplashScreen>
   late Animation<double> _animation;
 
   _startDelay() async {
-    // LocationCubit locationCubit = BlocProvider.of(context);
-    // await locationCubit.getGeoLocation();
-    // locationCubit.addMarker(context);
-    // locationCubit.setMarkerAddRecipient();
     _timer =
         Timer(const Duration(seconds: AppConstant.splashDelay), _goNextScreen);
   }
