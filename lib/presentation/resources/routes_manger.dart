@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:labeeb_front/presentation/main_screen/auth/screens/register_screen.dart';
+import 'package:labeeb_front/presentation/main_screen/prices_offers/screens/prices_offers_screen.dart';
 import 'package:labeeb_front/presentation/resources/route_animatin.dart';
 import '../main_screen/auth/screens/login_screen.dart';
 import '../main_screen/customers_And_Suppliers/screens/customers_and_suppliers_screen.dart';
+import '../main_screen/daily_restrictions/screens/daily_restrictions_screen.dart';
 import '../main_screen/invoices/screens/invoices_screens.dart';
 import '../main_screen/on_boarding/screens/on_boarding_screen.dart';
 import '../main_screen/select_main_category/screens/select_main_category_screen.dart';
@@ -33,6 +35,10 @@ class Routes {
   static const String customersAndSuppliersScreen = "/CustomersAndSuppliersScreen";
   /// InvoicesScreen
   static const String invoicesScreen = "/InvoicesScreen";
+  /// DailyRestrictionsScreen
+  static const String dailyRestrictionsScreen = "/DailyRestrictionsScreen";
+  /// DailyRestrictionsScreen
+  static const String pricesOffersScreen = "/PricesOffersScreen";
 }
 
 class RouteGenerator {
@@ -56,6 +62,10 @@ class RouteGenerator {
         return createRoute(const CustomersAndSuppliersScreen());
         case Routes.invoicesScreen:
         return createRoute(const InvoicesScreen());
+        case Routes.dailyRestrictionsScreen:
+        return createRoute(const DailyRestrictionsScreen());
+        case Routes.pricesOffersScreen:
+        return createRoute(const PricesOffersScreen());
       default:
         return unDefinedRoute();
     }
