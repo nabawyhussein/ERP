@@ -17,25 +17,25 @@ class AppConstant {
   static Locale? locale;
   static const Locale arabic = Locale('ar');
   static const Locale english = Locale('en');
-  static List<PageModel> lists = [
+  static List<PageModel> onBoardingLists = [
     PageModel(
         //   img: "assets/images/on_boarding1.png",
-        img: AppImages.appLogo,
+        img: "assets/lottie/onBoarding.json",
         titleTxt: "عنوان الصفحة",
         des:
-            "نص تعبيري يعبر عن شرح التطبيق وما ستفعله \n نص تعبيري يعبر عن شرح التطبيق وما ستفعله"),
+            "قم بإدارة جميع معاملاتك المالية مع أقوى نظام بين منافسيه بأقصى امان و كفائه"),
     PageModel(
-        img: AppImages.appLogo,
+        img: "assets/lottie/reportdiagram.json",
         //  img: "assets/images/on_boarding2.png",
         titleTxt: "عنوان الصفحة",
         des:
-            "نص تعبيري يعبر عن شرح التطبيق وما ستفعله \n نص تعبيري يعبر عن شرح التطبيق وما ستفعله"),
+            "تابع معنا جميع الحركات المالية الخاصة بمنشأتك"),
     PageModel(
-        img: AppImages.appLogo,
+        img: "assets/lottie/accountant.json",
         //  img: "assets/images/on_boarding3.png",
         titleTxt: "عنوان الصفحة",
         des:
-            "نص تعبيري يعبر عن شرح التطبيق وما ستفعله \n نص تعبيري يعبر عن شرح التطبيق وما ستفعله"),
+            "قم بمراجعة و تدقيق العمليات المالية\n في أي مكان كنت"),
   ];
   static List<HomeModel> homeList = [
     HomeModel(txtAr: AppString.treasuryAndBondsAra,txtEn: AppString.treasuryAndBondsEng,nextScreen: Routes.treasuryAndBondsScreens),

@@ -20,7 +20,7 @@ class OnBoardingScreen extends StatelessWidget {
           child: Scaffold(
         body: PageView.builder(
           controller: controller,
-          itemCount: AppConstant.lists.length,
+          itemCount: AppConstant.onBoardingLists.length,
           onPageChanged: (index) => pageIndexNotifier.value = index,
           //  physics:new NeverScrollableScrollPhysics(),
           itemBuilder: (context, pos) {
