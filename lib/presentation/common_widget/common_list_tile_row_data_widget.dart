@@ -16,14 +16,14 @@ class CommonListTileDataWidget extends StatelessWidget {
 
    @override
    Widget build(BuildContext context) {
-     return  Column(
-       children: [
-         Container(
-           width: AppSize.size(context).width,
-           padding:  EdgeInsets.symmetric(horizontal: AppSize.size(context).width*0.04,
-           vertical:  AppSize.size(context).height *0.005
-           ),
-           child: Row(
+     return  Container(
+       width: AppSize.size(context).width,
+       padding:  EdgeInsets.symmetric(horizontal: AppSize.size(context).width*0.04,
+       vertical:  AppSize.size(context).height *0.005
+       ),
+       child: Column(
+         children: [
+           Row(
              children: [
                CircleAvatar(
                  radius: 25,
@@ -61,9 +61,9 @@ class CommonListTileDataWidget extends StatelessWidget {
                const Icon(Icons.arrow_forward_ios)
              ],
            ),
-         ),
-         const Divider(color: ColorManger.dividerColor,thickness: 2,)
-       ],
+           const Divider(color: ColorManger.dividerColor,thickness: 2,)
+         ],
+       ),
      );
    }
  }

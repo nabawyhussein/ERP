@@ -78,7 +78,7 @@ class LoginScreen extends StatelessWidget {
                       textInputType: TextInputType.emailAddress,
                       validator: (val) {
                         if (val!.isEmpty) {
-                          return LocaleKeys.enterYourMobileNumber.tr();
+                          return LocaleKeys.enterYourEmail.tr();
                         }
                         return null;
                       },

@@ -7,11 +7,32 @@ import 'package:labeeb_front/presentation/common_widget/print_show_search_row_wi
 import 'package:labeeb_front/translations/locale_keys.g.dart';
 import '../../../common_widget/buid_app_bar.dart';
 import '../../../common_widget/common_list_tile_row_data_widget.dart';
+import '../../../resources/color_manger.dart';
 import '../../../resources/font_manger.dart';
+import '../../../resources/style_manger.dart';
 
-class TreasuryAndBondsScreens extends StatelessWidget {
+class TreasuryAndBondsScreens extends StatefulWidget {
   const TreasuryAndBondsScreens({Key? key}) : super(key: key);
 
+  @override
+  State<TreasuryAndBondsScreens> createState() => _TreasuryAndBondsScreensState();
+}
+
+class _TreasuryAndBondsScreensState extends State<TreasuryAndBondsScreens>  with SingleTickerProviderStateMixin{
+
+   TabController? treasuryTabController;
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    treasuryTabController = TabController(vsync: this, length: 2);
+  }
+   @override
+   void dispose() {
+     treasuryTabController!.dispose();
+     super.dispose();
+   }
+   //vertical: AppSize.size(context).height * 0.02,
+   //                   horizontal: AppSize.size(context).width * 0.085
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,41 +41,111 @@ class TreasuryAndBondsScreens extends StatelessWidget {
           child:  CommonAppBar(
             title: LocaleKeys.treasury.tr(),
           )),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.zero,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          // mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-                padding: EdgeInsets.symmetric(
-                    vertical: AppSize.size(context).height * 0.02,
-                    horizontal: AppSize.size(context).width * 0.085),
-                child: Column(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: AppSize.size(context).height * 0.02,
+                ),
+                 Padding(
+                   padding:  EdgeInsets.symmetric(
+                  horizontal: AppSize.size(context).width * 0.085),
+                   child: Column(
+                     children: [
+                       CommonContainerTwoTextRow(
+                          firstTxt: LocaleKeys.currentBalance.tr(),
+                          secondTxt: LocaleKeys.Creditor.tr()+" 151230",
+                          secondTextColor: Colors.red),
+                       const CreditorAndDebtorRowWidget(),
+                     ],
+                   ),
+                 ),
+
+                Stack(
                   children: [
-                     CommonContainerTwoTextRow(
-                        firstTxt: LocaleKeys.currentBalance.tr(),
-                        secondTxt: LocaleKeys.Creditor.tr()+" 151230",
-                        secondTextColor: Colors.red),
-                    const CreditorAndDebtorRowWidget(),
-                     CommonContainerTwoTextRow(
-                      firstTxt: LocaleKeys.addDocument.tr(),
-                      secondTxt:LocaleKeys.movementsReport.tr() ,
+                    Positioned.fill(
+                        child: Container(decoration: const BoxDecoration(
+                      border:  Border(
+                        bottom: BorderSide(
+                          color: ColorManger.dividerColor,
+                          width: 3.0,
+                        ),
+                      ),
+                    ),)),
+                    TabBar(
+                      controller: treasuryTabController,
+                      indicatorColor: ColorManger.primary,
+                      indicatorPadding: EdgeInsets.zero,
+
+                      indicatorSize: TabBarIndicatorSize.tab,
+                      indicatorWeight: 3,
+                      labelColor: ColorManger.primary,
+                      unselectedLabelStyle: getBoldStyle(
+                          fontSize: AppSize.size(context).width * .05,
+                          color: ColorManger.black),
+                      labelStyle: getBoldStyle(
+                          fontSize: AppSize.size(context).width * .055,
+                          color: ColorManger.black),
+                      unselectedLabelColor: ColorManger.dividerColor,
+                      tabs: [
+                        Tab(
+                          text: LocaleKeys.catchReceipt.tr(),
+                        ),
+
+                        // second tab [you can add an icon using the icon property]
+                        Tab(
+                          text: LocaleKeys.receipt.tr(),
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: AppSize.size(context).height * 0.02,
-                    ),
-                    const PrintSearchRowIconsWidget(),
                   ],
-                )),
+                ),
+                Expanded(
+                  child: TabBarView(
+                    controller: treasuryTabController,
+                    children: [
+                      // first tab bar view widget
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: AppSize.size(context).height * 0.02,
+                          ),
+                          CommonContainerTwoTextRow(
+                            firstTxt: LocaleKeys.addDocument.tr(),
+                            secondTxt:LocaleKeys.movementsReport.tr() ,
+                          ),
+                          SizedBox(
+                            height: AppSize.size(context).height * 0.02,
+                          ),
+                          const PrintSearchRowIconsWidget(),
+                          CommonListTileDataWidget(titleTxt: LocaleKeys.documentNum.tr(),
+                            subTitleTxt: LocaleKeys.lastMove.tr() +" 12/12/2022 ",
+                            statusTxt: ' 3200 '+ LocaleKeys.Creditor.tr(), circleTxt: '110',),
 
-            CommonListTileDataWidget(titleTxt: LocaleKeys.documentNum.tr(),
-              subTitleTxt: LocaleKeys.lastMove.tr() +" 12/12/2022 ",
-              statusTxt: ' 3200 '+ LocaleKeys.Creditor.tr(), circleTxt: '110',),
+                          BuildButtonWidget(txt: LocaleKeys.addDocument.tr(),darkGrey: false,onPressed: (){},),
+                        ],
+                      ),
+                      Center(
+                          child: Text(
+                            LocaleKeys.sorryThereAreNoPreviousRequests.tr(),
+                            style: getSemiBoldStyle(
+                                color: ColorManger.grey,
+                                fontSize: AppSize.size(context).width * .045),
+                          ))
+                    ],
+                  ),
+                ),
 
-            BuildButtonWidget(txt: LocaleKeys.addDocument.tr(),darkGrey: false,onPressed: (){},),
-          ],
-        ),
+              ],
+            ),
+          ),
+
+
+        ],
       ),
     );
   }

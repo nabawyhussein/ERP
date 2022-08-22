@@ -8,7 +8,7 @@
   "makeYourDataSafe" : "إجعل بياناتك آمنة",
   "password" : "كلمة المرور",
   "pleaseEnterTheMobileNumberToSendTheVerificationCode" : "من فضلك أدخل رقم الموبايل لإرسال رمز التحقق",
-  "enterYourMobileNumber" : "من فضلك ادخل رقم الهاتف",
+  "enterYourEmail" : "من فضلك ادخل البريد الالكترونى",
   "send" : "ارسال",
   "firstname" : "الإسم الأول",
   "lastname" : "الإسم التاني",
@@ -92,5 +92,7 @@
   "addClient": "إضافة عميل",
   "addInvoice": "إضافة فاتورة",
   "addRestrictions": "إضافة قيد",
-  "pricesOffers": "عروض اسعار"
+  "pricesOffers": "عروض اسعار",
+  "catchReceipt": "سند قبض",
+  "receipt": "سند صرف"
 }

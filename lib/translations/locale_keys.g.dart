@@ -10,7 +10,7 @@ abstract class  LocaleKeys {
   static const makeYourDataSafe = 'makeYourDataSafe';
   static const password = 'password';
   static const pleaseEnterTheMobileNumberToSendTheVerificationCode = 'pleaseEnterTheMobileNumberToSendTheVerificationCode';
-  static const enterYourMobileNumber = 'enterYourMobileNumber';
+  static const enterYourEmail = 'enterYourEmail';
   static const send = 'send';
   static const firstname = 'firstname';
   static const lastname = 'lastname';
@@ -95,5 +95,7 @@ abstract class  LocaleKeys {
   static const addInvoice = 'addInvoice';
   static const addRestrictions = 'addRestrictions';
   static const pricesOffers = 'pricesOffers';
+  static const catchReceipt = 'catchReceipt';
+  static const receipt = 'receipt';
 
 }

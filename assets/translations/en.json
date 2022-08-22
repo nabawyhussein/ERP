@@ -8,7 +8,7 @@
   "makeYourDataSafe" : "Make your data safe",
   "password" : "Password",
   "pleaseEnterTheMobileNumberToSendTheVerificationCode" : "Please enter the mobile number to send the verification code",
-  "enterYourMobileNumber" : "Enter Your Mobile Number",
+  "enterYourEmail" : "Enter Your ُEmail",
   "send" : "send",
   "firstname" : "First Name",
   "lastname" : "Last Name",
@@ -92,5 +92,7 @@
   "addInvoice": "Add Invoice",
   "addRestrictions": "Add Restrictions",
   "pricesOffers": "Prices Offers",
-  "documentNum": "Document Number"
+  "documentNum": "Document Number",
+  "catchReceipt": "Catch Receipt",
+  "receipt": "Receipt"
 }

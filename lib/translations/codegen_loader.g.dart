@@ -24,7 +24,7 @@ class CodegenLoader extends AssetLoader{
   "makeYourDataSafe": "إجعل بياناتك آمنة",
   "password": "كلمة المرور",
   "pleaseEnterTheMobileNumberToSendTheVerificationCode": "من فضلك أدخل رقم الموبايل لإرسال رمز التحقق",
-  "enterYourMobileNumber": "من فضلك ادخل رقم الهاتف",
+  "enterYourEmail": "من فضلك ادخل البريد الالكترونى",
   "send": "ارسال",
   "firstname": "الإسم الأول",
   "lastname": "الإسم التاني",
@@ -108,7 +108,9 @@ class CodegenLoader extends AssetLoader{
   "addClient": "إضافة عميل",
   "addInvoice": "إضافة فاتورة",
   "addRestrictions": "إضافة قيد",
-  "pricesOffers": "عروض اسعار"
+  "pricesOffers": "عروض اسعار",
+  "catchReceipt": "سند قبض",
+  "receipt": "سند صرف"
 };
 static const Map<String,dynamic> en = {
   "next": "next",
@@ -120,7 +122,7 @@ static const Map<String,dynamic> en = {
   "makeYourDataSafe": "Make your data safe",
   "password": "Password",
   "pleaseEnterTheMobileNumberToSendTheVerificationCode": "Please enter the mobile number to send the verification code",
-  "enterYourMobileNumber": "Enter Your Mobile Number",
+  "enterYourEmail": "Enter Your ُEmail",
   "send": "send",
   "firstname": "First Name",
   "lastname": "Last Name",
@@ -204,7 +206,9 @@ static const Map<String,dynamic> en = {
   "addInvoice": "Add Invoice",
   "addRestrictions": "Add Restrictions",
   "pricesOffers": "Prices Offers",
-  "documentNum": "Document Number"
+  "documentNum": "Document Number",
+  "catchReceipt": "Catch Receipt",
+  "receipt": "Receipt"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }
